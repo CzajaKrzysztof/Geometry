@@ -8,23 +8,24 @@ public class Circle extends Shape {
             this.radius = radius;
         }
     }
+    
     @Override
     public double calculateArea() {
-        return 0;
+       return Math.PI * Math.pow(radius, 2);
     }
 
     @Override
     public double calculatePerimeter() {
-        return 0;
+        return 2 * Math.PI * radius;
     }
 
     @Override
     public String getAreaFormula() {
-        return null;
+        return "π×r^2";
     }
 
     @Override
     public String getPerimeterFormula() {
-        return null;
+        return "2×π×r";
     }
 }
