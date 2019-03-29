@@ -14,22 +14,23 @@ public class Triangle extends Shape {
     }
     @Override
 	public double calculateArea() {
-		return 0;
+        double s = calculatePerimeter()/2;
+        return Math.sqrt(s * (s - a) * (s - b) * (s - c));
 	}
 
 	@Override
 	public double calculatePerimeter() {
-		return 0;
+		return a + b + c;
 	}
 
 	@Override
 	public String getAreaFormula() {
-		return null;
+		return "sqrt(s(s-a)(s-b)(s-c))\ns = (a+b+c)/2";
 	}
 
 	@Override
 	public String getPerimeterFormula() {
-		return null;
+		return "a + b + c";
 	}
     
 }
