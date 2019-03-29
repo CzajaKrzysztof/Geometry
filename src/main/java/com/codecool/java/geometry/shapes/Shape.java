@@ -38,6 +38,15 @@ public abstract class Shape {
      * @return true if any of args are greater than 0
      */
     public static boolean checkIfArgsGreaterThanZero(float... args) {
-        throw new NotYetImplementedException();
+        try {
+            for (float arg: args) {
+                if (arg <= 0) {
+                    throw new NotYetImplementedException();
+                }
+            }
+        } catch (NotYetImplementedException e) {
+            System.out.println("ERROR: One or more of shape paremateres are zero or less.");
+        }
+        return true;
     }
 }
