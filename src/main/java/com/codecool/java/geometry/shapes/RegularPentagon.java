@@ -3,11 +3,17 @@ package com.codecool.java.geometry.shapes;
 public class RegularPentagon extends Shape {
     private float a;
 
-    public RegularPentagon(float a) {
+	public RegularPentagon() {}
+	
+	public RegularPentagon(float a) {
         if (Shape.checkIfArgsGreaterThanZero(a)) {
             this.a = a;
         }
-    }
+	}
+	
+	public float getA() {
+		return a;
+	}
 
 	@Override
 	public double calculateArea() {
@@ -28,4 +34,9 @@ public class RegularPentagon extends Shape {
 	public String getPerimeterFormula() {
 		return "5xa";
 	}
+
+	@Override
+    public String toString() {
+        return String.format("Regular Pentagon, a = %.1f", a);
+    }
 }

@@ -45,7 +45,7 @@ public abstract class Shape {
                 }
             }
         } catch (NotYetImplementedException e) {
-            System.out.println("ERROR: One or more of shape paremateres are zero or less.");
+            System.out.println(e);
         }
         return true;
     }

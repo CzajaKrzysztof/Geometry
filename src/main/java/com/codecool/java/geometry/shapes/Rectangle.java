@@ -4,11 +4,21 @@ public class Rectangle extends Shape {
     private float a;
     private float b;
 
+    public Rectangle() {}
+    
     public Rectangle(float a, float b) {
         if (Shape.checkIfArgsGreaterThanZero(a, b)) {
             this.a = a;
             this.b = b;
         }
+    }
+
+    public float getA() {
+        return a;
+    }
+
+    public float getB() {
+        return b;
     }
 
     @Override
@@ -29,5 +39,10 @@ public class Rectangle extends Shape {
     @Override
     public String getPerimeterFormula() {
         return "2a + 2b";
+    }
+
+    @Override
+    public String toString() {
+        return String.format("Rectangle, a = %.1f, b = %.1f", a, b);
     }
 }
